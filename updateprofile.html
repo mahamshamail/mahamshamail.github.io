@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <title>Update Profile</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Update profile</title>
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  </script>
+  <link rel="stylesheet" href="css/updateprofile.css">
+  <link rel="stylesheet" href="css/common.css">
+  <script type="text/javascript" src="js/updateprofile.js"></script>
+</head>
+
+<body>
+  <div class="container" align="center">
+    <br><br>
+    <h1 id="heading" class="center-align">Update Profile</h1>
+    <div class="row">
+      <form class="col s12  z-depth-5" method="post" name="userinfo" onsubmit="return false;">
+
+        <div class=" row">
+          <div class="input-field col s6" id="colfname">
+            <i class="material-icons prefix">account_circle</i>
+            <input type="text" name="firstname" id="fname" placeholder="" required>
+            <label class="active" for="firstname">FirstName</label>
+          </div>
+
+          <div class="input-field col s6" id="collname">
+            <i class="material-icons prefix">account_circle</i>
+            <input type="text" name="lastname" id="lname" placeholder="">
+            <label class="active" for="lastname">LastName</label>
+          </div>
+
+          <div class="input-field col s12" id="colemail">
+            <i class="material-icons prefix">email</i>
+            <input type="email" name="email" autocomplete="off" id="email" placeholder="" required>
+            <label class="active" for="email">Email</label>
+          </div>
+
+          <div class="input-field col s12" id="colphone">
+            <i class="material-icons prefix">contact_phone</i>
+            <input type="tel" name="phone" maxlength="11" id="phone" placeholder="" required>
+            <label class="active" for="phone">Contact No </label>
+          </div>
+
+          <div id="div" class="row center">
+            <button id="updateprofile" class="waves-effect waves-light btn-large" type="submit" name="submit">Update Profile</button>
+            <!-- <input class="waves-effect waves-light btn-large" type="submit" name="submit" value="Update Profile" id="updateprofile"> -->
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+
+</html>

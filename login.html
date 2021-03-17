@@ -1,0 +1,65 @@
+<html>
+
+<head>
+  <title>Login</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="css/login.css">
+  <link rel="stylesheet" href="css/common.css">
+  <script type="text/javascript" src="js/login.js"></script>
+
+</head>
+
+<body background="image/main_background.png">
+  <div class="container">
+    <br><br>
+    <div class="row login">
+      <!-- z-depth-5 for shadow effect of form -->
+      <form class="col s12 N/A transparent" method="post" name="userCredential" onsubmit="return false">
+        <div class=" card z-depth-5">
+          <div class="card-action black">
+            <h3>Login Here</h3>
+          </div>
+          <div class="card-content">
+
+            <div class="form-field">
+              <i class="material-icons prefix">email</i>
+              <label for="email">Email</label>
+              <input type="email" name="email" id="email" autocomplete="off" required>
+            </div><br>
+
+            <div class="form-field">
+              <i class="material-icons prefix">lock</i>
+              <label for="password">Password</label>
+              <input type="password" name="password" id="password" maxlength="8" required>
+            </div><br>
+
+            <div class="form-field">
+              <input type="checkbox" id="remember">
+              <label for="remember">Remember me</label>
+            </div><br>
+
+            <div class="form-field center-align">
+              <button class="waves-effect waves-light btn-large" type="submit" name="submit" id="signin">Sign In</button>
+              <!-- <input class="waves-effect waves-light btn-large" type="submit" name="submit" value="Sign In" id="signin"> -->
+            </div><br>
+
+            <div align="center">
+              <span id="noac">Don't Have an account? </span>
+              <!-- <span id="signuplink" onclick="registration.html">Sign Up </span> -->
+              <a id="signuplink" href="registration.html">Sign Up</a>
+
+              </span>
+            </div>
+          </div>
+        </div>
+
+      </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+<html>
+
+<head>
+  <title>Checkout</title>
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <!-- <script type="text/javascript" src="js\vacationdestinations.js" defer="true"></script> -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script> -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <link rel="stylesheet" href="css/home.css">
+   <!-- <link rel="stylesheet" href="css/login.css"> -->
+  <!-- <link rel="stylesheet" href="css/common.css"> -->
+ <!--
+   The home page should be displaying a menu for the restaurant and 
+   allow the user to filter the menu based on the different criteria such as price, availability, alphabetical, etc. 
+   It should also allow the user to add items to the cart. 
+   The API for fetching the menu details can be
+found here: Menu API LINK-->
+</head>
+
+<body onload="onloadFun()">
+  <div id="hideSlide" class="slider"></div>
+  <header >
+    <div class="header-div" style="color: #ffda00; font-size: 50px; ">
+      <div class="burger" onclick="burgerMenuCreation()">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+      </div>
+
+      <div class="logo">
+        <a href="home.html" style="color: var(--mainText);"> maham<span style="color: #65d100;">EATS</span></a> 
+      </div>
+      <!-- <i class="fa fa-shopping-cart" onclick="cartClicked()">
+        <div id="cart-num">0</div>
+      </i> -->
+    </div>
+  </header>
+  <h1 style="color: var(--mainText); padding-left: 90px; padding-bottom: 0px;">Confirm Your Order</h1>
+  <hr style="margin-left: 70px; margin-right: 70px;">
+    <div id="order-info">
+      <div class="order-items"></div>
+      <div id="order-items-total"></div>
+      <div id="discount">
+        <hr style="margin: 0px; margin-right: 70px;">
+        <div id="dis-percent"></div>
+        <hr style="margin: 0px; margin-right: 70px;">
+        <hr style="margin: 0px; margin-right: 70px;">
+        <div id="total-after-discount" style="background-color: var(--greenTxt); margin-right: 70px; color: brown;"></div>
+        <hr style="margin: 0px; margin-right: 70px;">
+        <hr style="margin: 0px; margin-right: 70px;">
+      </div>
+
+    </div>
+  <div id="btns">
+    <div id="confirm" class="button" onclick="return alert('Your order has been placed!')" style="width: 200px;">Confirm Order</div>
+   <a id="cancel" href="home.html">  <div class="button"  style="width: 200px;">Cancel Order</div> </a>s
+   
+</div>
+ 
+  <script type="text/javascript" src="js/menuAnimation.js"></script>
+   <script type="text/javascript" src="js/checkout.js"></script>
+ <!-- <script type="text/javascript" src="js/login.js"></script>  -->
+
+
+ <!-- <script type="text/javascript" src="js/api.js"></script> -->
+
+  
+  <script type="text/javascript" src="js/popup.js"></script> 
+
+ 
+</body>
+
+</html>

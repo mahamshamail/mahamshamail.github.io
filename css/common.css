@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+input {
+  font-weight: bold;
+  font-size: 20px !important;
+  color: white;
+}
+h1 {
+  font-family: "Open Sans", sans-serif;
+  font-style: italic;
+  color: #ffda00;
+  font-size: 50px;
+}
+#signuplink {
+  color: #ffda00;
+}
+
+#noac {
+  color: #ffffff;
+}
+button {
+  color: black;
+  font-size: 15px;
+  font-weight: normal;
+}
+.waves-effect {
+  background-color: #ffda00;
+  color: black;
+}
+.waves-effect:hover {
+  padding: 0px 40px;
+  background-color: #ffe966;
+  color: black;
+}
+.material-icons {
+  color: white;
+  position: relative;
+  top: 8px;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../image/main_background.png);
+}
+
+/* For mobile: only 480px or less screen width*/
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 20px;
+  }
+  #colfname,
+  #collname,
+  #colcpwd,
+  #colpwd {
+    width: 100%;
+  }
+  .waves-effect {
+    font-size: 12px;
+  }
+  .waves-effect:hover {
+    padding: 0px 20px;
+  }
+  /* .material-icons{
+    color: white;
+    position:relative;
+  } */
+  input {
+    font-size: 15px !important;
+  }
+}
+
+/* For tablets: only 481 to 1024px screen width */
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+  h1 {
+    font-size: 40px;
+  }
+  .container {
+    margin-top: 21%;
+  }
+  .waves-effect {
+    font-size: 18px;
+  }
+  input {
+    font-size: 18px !important;
+  }
+}
+/* For desktop devices: only 1025px or less screen width */
+@media screen and (min-width: 1025px) {
+}

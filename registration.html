@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <title>Register</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title> Registration Form</title>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Compiled and minified CSS (materializeCSS)-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <link rel="stylesheet" href="css/registration.css">
+  <link rel="stylesheet" href="css/common.css">
+  <script type="text/javascript" src="js/registration.js"></script>
+</head>
+
+<body>
+  <div class="container" align="center">
+    <br><br>
+    <h1 id="heading" class="center-align"> Register Here</h1>
+    <div class="row">
+      <!-- z-depth-5 for shadow effect of form -->
+      <form class="col s12 N/A transparent z-depth-5" method="post" name="userinfo" onsubmit="return false">
+
+        <div class="row">
+
+          <div class="input-field col s6" id="colfname">
+            <i class="material-icons prefix">account_circle</i>
+            <input type="text" name="firstname" id="firstname" required>
+            <label class="active" for="firstname">FirstName</label>
+          </div>
+
+          <div class="input-field col s6" id="collname">
+            <i class="material-icons prefix">account_circle</i>
+            <input type="text" name="lastname" id="lastname">
+            <label class="active" for="lastname">LastName</label>
+          </div>
+
+          <div class="input-field col s12">
+            <i class="material-icons prefix">email</i>
+            <input type="email" name="email" autocomplete="off" id="email" required>
+            <label class="active" for="email">Email</label>
+            <!-- <span class="helper-text" data-error="wrong" data-success="right">Helper text</span> -->
+          </div>
+
+          <div class="input-field col s6" id="colpwd">
+            <i class="material-icons prefix">lock</i>
+            <input type="password" name="password" maxlength="8" id="password" required>
+            <label class="active" for="password">Password</label>
+          </div>
+
+          <div class="input-field col s6" id="colcpwd">
+            <i class="material-icons prefix">lock</i>
+            <input type="password" name="cpassword" maxlength="8" id="cpassword" required>
+            <label class="active" for="cpassword">Confirm Password</label>
+          </div>
+
+          <div class="input-field col s12">
+            <i class="material-icons prefix">contact_phone</i>
+            <input type="tel" name="phone" maxlength="11" id="phone" required>
+            <label class="active" for="phone">Contact No </label>
+          </div>
+          <!-- <button class="col s6 btn red z-depth-5 center-align">Sign Up</button> -->
+          <div id="div" class="row center">
+            <!-- <input class="waves-effect waves-light btn-large" type="submit" name="submit" value="Sign Up" id="register"> -->
+            <button id="register" class="waves-effect waves-light btn-large" type="submit" name="submit">Sign Up</button>
+          </div>
+
+          <div align="center">
+            <span id="noac">Already have an account? </span>
+            <a id="signuplink" href="login.html">Sign In</a>
+            </span>
+          </div>
+      </form>
+    </div>
+  </div>
+
+
+</body>
+
+</html>
