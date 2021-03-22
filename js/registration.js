@@ -57,7 +57,6 @@ else if (password.length < 4) {
 else if (!(password).match(cpassword)) {
 alert("Your passwords don't match. Try again?");
 } else {
-
   //userList.push(fname,lname,email,password,phone);
   //  userList.push({"fname" : fname, "lname" : lname,"email" : email, "password" : password, "phone" : phone});
   userList.push(({fname,lname,email,password,phone}));

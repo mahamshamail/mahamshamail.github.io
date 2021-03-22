@@ -50,7 +50,7 @@ const list = localStorage.getItem('orderlist');
 const listArr = list.split("-");
 if(localStorage.isLogin){
 
-  const confirm = document.getElementById("confirm");
+  const confirm = document.getElementById("confirmed");
   confirm.style.visibility ="visible";
   const cancel = document.getElementById("cancel");
   cancel.style.visibility ="visibles";
@@ -77,13 +77,25 @@ if(totalPrice > 100 ){
 
 }
 }else{
-  const confirm = document.getElementById("confirm");
+  const confirm = document.getElementById("confirmed");
   confirm.style.visibility ="hidden";
   const cancel = document.getElementById("cancel");
   cancel.style.visibility ="hidden";
   const info = document.getElementById("order-info")
-  info.innerText="Please Login First By Clicking on the Burger Menu."
-
+  info.innerText="Please Login or Register First."
+  info.style.textAlign ="center";
+  const loginbtn = document.createElement("a");
+  loginbtn.classList = "button";
+  loginbtn.innerHTML = "Login";
+  loginbtn.href = "login.html";
+  //loginbtn.style.width = "300px";
+  info.appendChild(loginbtn);
+  const registerbtn = document.createElement("a");
+  registerbtn.classList = "button";
+  registerbtn.innerHTML = "Register";
+  registerbtn.href = "registration.html";
+  //loginbtn.style.width = "300px";
+  info.appendChild(registerbtn);
 }
 
 console.log(listArr);

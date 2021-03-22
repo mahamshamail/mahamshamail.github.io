@@ -60,55 +60,54 @@ console.log("logout click");
 //  });
 
 $(document).ready(function() {
-  console.log(localStorage.isLogin);
-    if(localStorage.isLogin){
-       window.location = "home.html"
+console.log(localStorage.isLogin);
+  if(localStorage.isLogin){
+     window.location = "home.html"
+  }
+
+  var userListData = [];
+    var loginData = [];
+    // $('input[name=email]').val('p@gmail.com');
+    // $('input[name=password]').val('1234');
+
+  if ("userList" in localStorage){
+      userListData = JSON.parse(localStorage.getItem("userList"));
+      console.log(userListData);
     }
-  
-    var userListData = [];
-      var loginData = [];
-      // $('input[name=email]').val('p@gmail.com');
-      // $('input[name=password]').val('1234');
-  
-    if ("userList" in localStorage){
-        userListData = JSON.parse(localStorage.getItem("userList"));
-        console.log(userListData);
-      }
-  $("#signin").click(function(e) {
-  console.log("signin click");
-  var email = $("#email").val();
-  var password = $("#password").val();
-  
-  if (email == '' || password == '') {
-  alert("Please fill all fields...!!!!!!");
-  }
-  else if (password.length < 4) {
-    alert("Password should atleast 4 character in length...!!!!!!");
-  }
-   else {
-     for (var i = 0; i < userListData.length; i++) {
-       if (email == userListData[i].email && password == userListData[i].password) {
-         var fullName = userListData[i].fname + " " + userListData[i].lname;
-           //localStorage.isLogin = true;
-           loginData.push(({fullName, email}));
-           localStorage.setItem("loginData", JSON.stringify(loginData));
-  
-           if($("#remember").prop('checked') == true){
-            // console.log("checked");
-            localStorage.isLogin = true;
-          }else{
-            localStorage.isLogin = false;
-          }
-           alert ("Login successfully");
-           // window.location.replace
-           window.location.href = 'home.html';
-            return false;
-   }
-  }
-  alert('Invalid Username or Password! Please try again.');
-      e.preventDefault();
-      window.location="login.html";
-  
-  }
-  })});
-  
+$("#signin").click(function(e) {
+console.log("signin click");
+var email = $("#email").val();
+var password = $("#password").val();
+
+if (email == '' || password == '') {
+alert("Please fill all fields...!!!!!!");
+}
+else if (password.length < 4) {
+  alert("Password should atleast 4 character in length...!!!!!!");
+}
+ else {
+   for (var i = 0; i < userListData.length; i++) {
+     if (email == userListData[i].email && password == userListData[i].password) {
+       var fullName = userListData[i].fname + " " + userListData[i].lname;
+         //localStorage.isLogin = true;
+         loginData.push(({fullName, email}));
+         localStorage.setItem("loginData", JSON.stringify(loginData));
+
+         if($("#remember").prop('checked') == true){
+          // console.log("checked");
+          localStorage.isLogin = true;
+        }else{
+          localStorage.isLogin = false;
+        }
+         alert ("Login successfully");
+         // window.location.replace
+         window.location.href = 'home.html';
+          return false;
+ }
+}
+alert('Invalid Username or Password! Please try again.');
+    e.preventDefault();
+    window.location="login.html";
+
+}
+})});
