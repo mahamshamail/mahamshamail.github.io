@@ -1,7 +1,7 @@
 <html>
 
 <head>
-  <title>Menu</title>
+  <title>Checkout</title>
   <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
@@ -14,6 +14,8 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
   <link rel="stylesheet" href="css/home.css">
+   <!-- <link rel="stylesheet" href="css/login.css"> -->
+  <!-- <link rel="stylesheet" href="css/common.css"> -->
  <!--
    The home page should be displaying a menu for the restaurant and 
    allow the user to filter the menu based on the different criteria such as price, availability, alphabetical, etc. 
@@ -22,131 +24,56 @@
 found here: Menu API LINK-->
 </head>
 
-<body  >
-  <div id="hideSlide" class="slider">
-    <!-- <ul id="n" class="nav-links"  >
-      <li id="closebtn"  onclick="navSlide()" ><a  onclick="navSlide()" id="res-button" class="button"   >X</a></li>  
-      <li  class="xbtn"><a  class="button" href="registration.html" >Register</a></li>
-      <li ><a class="button"   href="login.html" >Login</a></li>
-
-    </ul> -->
-
-  </div>
-
+<body onload="onloadFun()">
+  <div id="hideSlide" class="slider"></div>
   <header >
-   
     <div class="header-div" style="color: #ffda00; font-size: 50px; ">
-      <!-- <div class="burger">
-        <div class="line1"></div>
-        <div class="line2"></div>
-        <div class="line3"></div>
-      </div>
-      <ul class=".nav-links">
-        <li>hbubu</li>
-        <li>hbubu</li>
-        <li>hbubu</li>
-      </ul> -->
-
       <div class="burger" onclick="burgerMenuCreation()">
           <div class="line1"></div>
           <div class="line2"></div>
           <div class="line3"></div>
       </div>
-  
+
       <div class="logo">
         <a href="home.html" style="color: var(--mainText);"> maham<span style="color: #65d100;">EATS</span></a> 
       </div>
-
-      
-        <i class="fa fa-shopping-cart" onclick="cartClicked()">
-          <div id="cart-num">0</div>
-        </i>
-       
-
-      
+      <!-- <i class="fa fa-shopping-cart" onclick="cartClicked()">
+        <div id="cart-num">0</div>
+      </i> -->
     </div>
-  
   </header>
-  <div class="filter-div" >
-  
-  </div>
-  <hr>
-  <br>
- 
-  <div class="main-container">
-
-    <div class="side-container"> 
-      <h4 class="side-menu-txt" >Price Range</h4>
-      <div class="price-range-wrap">
-        <span class="price-range" onclick="filterMenuByLowPrice()">$</span>
-        <span class="price-range" onclick="filterMenuByMidPrice()">$$</span>
-        <span class="price-range" onclick="filterMenuByHighPrice()" >$$$</span>
-
+  <h1 style="color: var(--mainText); padding-left: 90px; padding-bottom: 0px;">Confirm Your Order</h1>
+  <hr style="margin-left: 70px; margin-right: 70px;">
+    <div id="order-info">
+      <div class="order-items"></div>
+      <div id="order-items-total"></div>
+      <div id="discount">
+        <hr style="margin: 0px; margin-right: 70px;">
+        <div id="dis-percent"></div>
+        <hr style="margin: 0px; margin-right: 70px;">
+        <hr style="margin: 0px; margin-right: 70px;">
+        <div id="total-after-discount" style="background-color: var(--greenTxt); margin-right: 70px; color: brown;"></div>
+        <hr style="margin: 0px; margin-right: 70px;">
+        <hr style="margin: 0px; margin-right: 70px;">
       </div>
-    </div>
-    <div class="grid-container">
-      <h1 id="menu-title" >Menu</h1>
-          <div id="data-grid" class="data row"></div>
-    </div>
-  </div>
-
- <div id="coverUp" >
-  <div id="popUp">
-    <div class="tint">
-    <div id="popUpHead">
-      <h3 id="popUpTitle">Title</h3>
-      <div id="popUpClose"class="button" onclick="popUpClose()"><h5>X</h5></div>
-    </div>
-   
-    <div id="menuItem">
-   
-      <img id="popImg">
-      <div id="item-detail">
-        <p id="desc"></p>
-       <div class="title-price tp-contain">
-         <div id="shadow" class="pop-shadow">
-          <i id="popStar"class=" star"></i>
-          <h5 id="popRatings" ></h5>
-        </div>
-        
-          <h5 id="shadow2"class="pop-shadow popCategory" >dgvdf</h5>
-          <h4  id="shadow3" class="pop-shadow popPrice">dfgfd</h4>
-        </div>
-      </div>
-    
 
     </div>
-     
-    <div id="avail">
-      <div class="button increment" onclick="incrementAddToOrder()">+</div>
-      <div id="quantity"class=" orderNum">0</div>
-      <div class="button decrement" onclick="decrementSubFromOrder()">-</div>
-      <div id="quantity-price"class="orderNum orderPrice">Added 0 to order: $0</div>
-      <div id="addToCart"class="button" onclick="addToCart()">Add To Cart</div>
-     
-    </div>
-    <div id="availability"></div>
-    </div>
-  </div>
- </div>
-
- <div id="cart-popUp" >
-   <div id="cartHead" class="cart-head">
-    <h3 class="cart-heading">Your Order</h3>
-    <h4 class="button cart-close" onclick="closeCart()">x</h4>
-    
-   </div>
-   <hr id="hr-pop">
+  <div id="btns">
+    <a id="confirmed" href="orderConfirmed.html">  <div id="confirm" class="button" onclick="return alert('Your order has been placed!')" style="width: 200px;">Confirm Order</div></a>
+   <a id="cancel" href="home.html">  <div class="button"  style="width: 200px;">Cancel Order</div> </a>
   
-   <div class="cart-data"></div>
    
-    <div id="check-out"><a id="check0ut"href="checkout.html" style="color: var(--mainText);" >Next: Check Out: $0</a></div>  
- </div>
+</div>
  
- <script type="text/javascript" src="js/api.js"></script>
-
   <script type="text/javascript" src="js/menuAnimation.js"></script>
-  <script type="text/javascript" src="js/popup.js"></script>
+   <script type="text/javascript" src="js/checkout.js"></script>
+ <!-- <script type="text/javascript" src="js/login.js"></script>  -->
+
+
+ <!-- <script type="text/javascript" src="js/api.js"></script> -->
+
+  
+  <script type="text/javascript" src="js/popup.js"></script> 
 
  
 </body>
