@@ -35,7 +35,7 @@ $(document).ready(function() {
                     userList[i].password = newPwd;
                     console.log("new userdata" + userList[i].password);
                     alert ("Password changed successfully");
-                    window.location.href = 'home.html';
+                    window.location.href = 'index.html';
                   }
                   break;
                 }
