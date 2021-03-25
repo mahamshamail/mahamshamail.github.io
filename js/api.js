@@ -33,7 +33,7 @@ console.log("logout click");
 if(confirm('Are you sure you want to logout?')) {
   localStorage.removeItem("loginData");
   localStorage.removeItem("isLogin");
-  window.location.href = 'home.html';
+  window.location.href = 'index.html';
       }else{
         return false;
     }
