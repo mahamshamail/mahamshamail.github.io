@@ -1,3 +1,4 @@
+
 # mahamEATS Restaurant Website
 
 ### A restaurant website, that lists menu using 
@@ -24,5 +25,8 @@
 To view the live website please visit: 
 https://mahamshamail.github.io
 
-This website uses: HTML, CSS, JavaScript and Jquery 
+This website is built using: HTML, CSS, JavaScript and Jquery 
+
+<img width="1434" alt="Screenshot 2021-03-25 at 9 59 17 AM" src="https://user-images.githubusercontent.com/50436238/112484995-d4adeb80-8d50-11eb-9a0d-242df23bff7e.png">
+
 
