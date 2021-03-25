@@ -1,4 +1,4 @@
-# mahamshamail.github.io
+# mahamEATS Restaurant Website
 
 ### A restaurant website, that lists menu using 
 * pictures
