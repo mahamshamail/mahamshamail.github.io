@@ -64,7 +64,7 @@ alert("Your passwords don't match. Try again?");
   localStorage.setItem("userList", JSON.stringify(userList));
   localStorage.setItem("loginData", JSON.stringify(loginData));
     localStorage.isLogin = true;
-  window.location.href = 'home.html';
+  window.location.href = 'index.html';
    return false;
 }
 })});
