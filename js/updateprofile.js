@@ -37,7 +37,7 @@ $("#deleteprofile").click(function() {
           localStorage.setItem("userList", JSON.stringify(userList));
           localStorage.removeItem("loginData");
           localStorage.removeItem("isLogin");
-            window.location.href = 'home.html';
+            window.location.href = 'index.html';
         }
         break;
       }
@@ -68,7 +68,7 @@ else {
         user.phone = phone;
         userList[i] = user;
         alert ("Profile updated successfully");
-        window.location.href = 'home.html';
+        window.location.href = 'index.html';
       }
         break;
     }
