@@ -62,7 +62,7 @@ console.log("logout click");
 $(document).ready(function() {
 console.log(localStorage.isLogin);
   if(localStorage.isLogin){
-     window.location = "home.html"
+     window.location = "index.html"
   }
 
   var userListData = [];
@@ -101,7 +101,7 @@ else if (password.length < 4) {
         }
          alert ("Login successfully");
          // window.location.replace
-         window.location.href = 'home.html';
+         window.location.href = 'index.html';
           return false;
  }
 }
